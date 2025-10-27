@@ -1,21 +1,25 @@
-var studentData = new Map()
+var studentData = [];
 
 
 function addData(studentName, studentGrade){
-    studentData.set(studentName, studentGrade);
+    studentData.push({
+        name: studentName,
+        grade: studentGrade
+        });
     printData();
 }
 
 function printData(){
     const studentGradeTable = document.getElementById("student_grade_table");
     const newRow = studentGradeTable.insertRow();
+    for (var i = 0; i < studentData.length; i++){
+        newRow.innerHTML = `
+            <td>${studentData[i].name}</td>
+            <td>${studentData[i].grade}</td>
+        `;
+    }
+}
 
-    studentData.forEach((studentGrade, studentName) =>{
-        if (studentGrade != "" && studentName != ""){
-            newRow.innerHTML = `
-                <td>${studentName}</td>
-                <td>${studentGrade}</td>
-            `;
-        }
-    }, this);
+function sort(){
+
 }
