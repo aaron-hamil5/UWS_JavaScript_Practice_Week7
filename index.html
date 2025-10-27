@@ -3,6 +3,7 @@
     <head>
         <link rel="stylesheet" href="css/styles.css">
         <link rel="stylesheet" href="css/index.css">
+        <script src="javascript/grades.js"></script>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="UWS Student Grades Input"> <!--TODO-->
@@ -32,11 +33,11 @@
                 <h2>Student Grade</h2>
                 <input id="student_grade" type="number" placeholder="65">
                 <br>
-                <a class="button" onclick="">Add Student</a>
+                <a class="button" onclick="addData(student_name.value, student_grade.value)">Add Student</a>
             </article>
             <article class="right_side">
                 <h2>Here you go:</h2>
-                <table>
+                <table id="student_grade_table">
                     <tr class="table_title_bar">
                         <th>Name</th>
                         <th>Grade</th>
