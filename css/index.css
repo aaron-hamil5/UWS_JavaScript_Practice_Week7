@@ -1,1 +1,39 @@
-/* Add custom styles here for this page */
+main{
+    display: flex;
+}
+.left_side{
+    width: 100%;
+    height:fit-content;
+    background-color: var(--md-sys-color-primary-container);
+    border-radius: 20px ;
+    padding: 15px 15px 25px 15px;
+    margin-right: 5px;
+}
+input{
+    margin-bottom: 20px;
+}
+.right_side{
+    width: 100%;
+    height:fit-content;
+    border-radius: 20px ;
+    background-color: var(--md-sys-color-tertiary-container);
+    padding: 15px;
+    margin-left: 5px;
+}
+
+table{
+    border-collapse: collapse;
+    width: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.table_title_bar{
+    background-color: var(--md-sys-color-primary);
+}
+
+.table_title_bar th{
+    padding: 5px;
+    font-weight: 200;
+    color: var(--md-sys-color-on-primary);
+}
