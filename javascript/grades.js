@@ -11,9 +11,11 @@ function printData(){
     const newRow = studentGradeTable.insertRow();
 
     studentData.forEach((studentGrade, studentName) =>{
-    newRow.innerHTML = `
-        <td>${studentName}</td>
-        <td>${studentGrade}</td>
-    `;
+        if (studentGrade != "" && studentName != ""){
+            newRow.innerHTML = `
+                <td>${studentName}</td>
+                <td>${studentGrade}</td>
+            `;
+        }
     }, this);
 }
